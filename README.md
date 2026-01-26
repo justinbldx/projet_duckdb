@@ -16,8 +16,10 @@ projet_duckdb/
 ### 3. Déploiement
 
 1. Cloner le projet
-    ```git clone <url_du_projet>
-    cd projet_duckdb```
+    ```
+    git clone <url_du_projet>
+    cd projet_duckdb
+    ```
 2. Placer tous les fichiers de données dans `data/`
 3. Donner les droits d'exécution au script :
     ```chmod +x run_demo.sh```

@@ -239,44 +239,53 @@ WHERE split_part(file, '/', -1) LIKE 'transaction_%_%';
 -- );
 
 -- ===========================================================
--- REQUÊTES DE TEST
+-- REQUÊTES DE TEST : SELECT
 -- ===========================================================
 
--- SELECT pour avoir les 10 membres qui ont le plus dépensé
-SELECT idMembre, nom, prenom, SUM(montantTransaction) AS total_depense
-FROM Membre m
-JOIN Transaction t ON m.idMembre = t.idBeneficiaire
-GROUP BY idMembre, nom, prenom
-ORDER BY total_depense DESC
+-- Nombre total de transactions et dépense moyenne par membre
+SELECT
+    idBeneficiaire,
+    COUNT(*) AS nb_transactions,
+    AVG(montantTransaction) AS depense_moyenne
+FROM read_csv_auto('data/transaction.csv')
+GROUP BY idBeneficiaire
+ORDER BY depense_moyenne DESC
 LIMIT 10;
 
--- SELECT pour avoir les compétences d'un membre avec leurs catégories
-SELECT *
-FROM ImageTransaction;
-
--- SELECT pour avoir les transactions avec leurs images associées
+-- Top 5 des compétences les plus présentes parmi les talents
 SELECT
-    t.idTransaction,
-    t.montantTransaction,
-    i.numeroPhoto,
-    i.image_path
-FROM Transaction t
-JOIN ImageTransaction i
-ON t.idTransaction = i.idTransaction
-WHERE t.idTransaction = 36
-ORDER BY i.numeroPhoto;
+    competence,
+    COUNT(*) AS nb_membres
+FROM competence c
+JOIN talent t
+    ON c.idCompetence = t.idCompetence
+GROUP BY competence
+ORDER BY nb_membres DESC
+LIMIT 5;
 
--- CREATE VIEW pour avoir les transactions avec leurs images associées
-DROP VIEW IF EXISTS TransactionAvecImages;
-
-CREATE VIEW TransactionAvecImages AS
+-- Nombre de commentaires par note
 SELECT
-    t.*,
-    i.numeroPhoto,
-    i.image_path
-FROM Transaction t
-LEFT JOIN ImageTransaction i
-ON t.idTransaction = i.idTransaction;
+    note,
+    COUNT(*) AS nb_commentaires
+FROM commentaire
+GROUP BY note
+ORDER BY note DESC;
 
+-- Nombre de qualifications par mot-clé
+SELECT
+    motClef,
+    COUNT(*) AS nb_qualifications
+FROM read_json_auto('data/qualification.json')
+GROUP BY motClef
+ORDER BY nb_qualifications DESC
+LIMIT 5;
 
-
+-- ===========================================================
+-- REQUÊTES DE TEST : GLOB
+-- ===========================================================
+SELECT
+    try_cast(regexp_extract(split_part(file, '/', -1), 'transaction_([0-9]+)_([0-9]+)\.jpg', 1) AS INTEGER) AS idTransaction,
+    try_cast(regexp_extract(split_part(file, '/', -1), 'transaction_([0-9]+)_([0-9]+)\.jpg', 2) AS INTEGER) AS numeroPhoto,
+    file AS image_path
+FROM glob('/data/photos_transactions_massif/*')
+WHERE split_part(file, '/', -1) LIKE 'transaction_%_%';

@@ -1,3 +1,4 @@
+idTransaction,dateTransaction,montantTransaction,etat,idBeneficiaire,idFournisseur
 "1","2026-01-13 11:33:09","4","1","2557","578"
 "2","2026-01-13 11:33:09","5","1","2795","907"
 "3","2026-01-13 11:33:09","10","1","1677","978"
