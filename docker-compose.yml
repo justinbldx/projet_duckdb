@@ -1,0 +1,8 @@
+services:
+  duckdb:
+    image: duckdb/duckdb
+    container_name: duckdb
+    volumes:
+      - ./data:/data
+      - ./duckdb:/scripts
+    command: ["duckdb", "/data/mydatabase.duckdb", "-f", "/scripts/integration.sql"]

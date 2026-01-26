@@ -1,0 +1,302 @@
+[
+  {
+    "idMembre": 16,
+    "idCompetence": 11,
+    "motClef": "Bilingue"
+  },
+  {
+    "idMembre": 23,
+    "idCompetence": 3,
+    "motClef": "Bilingue"
+  },
+  {
+    "idMembre": 58,
+    "idCompetence": 3,
+    "motClef": "Bilingue"
+  },
+  {
+    "idMembre": 177,
+    "idCompetence": 2,
+    "motClef": "Bilingue"
+  },
+  {
+    "idMembre": 184,
+    "idCompetence": 9,
+    "motClef": "Bilingue"
+  },
+  {
+    "idMembre": 217,
+    "idCompetence": 3,
+    "motClef": "Bilingue"
+  },
+  {
+    "idMembre": 302,
+    "idCompetence": 9,
+    "motClef": "Bilingue"
+  },
+  {
+    "idMembre": 347,
+    "idCompetence": 8,
+    "motClef": "Bilingue"
+  },
+  {
+    "idMembre": 457,
+    "idCompetence": 1,
+    "motClef": "Bilingue"
+  },
+  {
+    "idMembre": 14,
+    "idCompetence": 6,
+    "motClef": "Diplômé"
+  },
+  {
+    "idMembre": 17,
+    "idCompetence": 7,
+    "motClef": "Diplômé"
+  },
+  {
+    "idMembre": 45,
+    "idCompetence": 7,
+    "motClef": "Diplômé"
+  },
+  {
+    "idMembre": 82,
+    "idCompetence": 7,
+    "motClef": "Diplômé"
+  },
+  {
+    "idMembre": 173,
+    "idCompetence": 8,
+    "motClef": "Diplômé"
+  },
+  {
+    "idMembre": 367,
+    "idCompetence": 2,
+    "motClef": "Diplômé"
+  },
+  {
+    "idMembre": 374,
+    "idCompetence": 1,
+    "motClef": "Diplômé"
+  },
+  {
+    "idMembre": 378,
+    "idCompetence": 9,
+    "motClef": "Diplômé"
+  },
+  {
+    "idMembre": 413,
+    "idCompetence": 6,
+    "motClef": "Diplômé"
+  },
+  {
+    "idMembre": 434,
+    "idCompetence": 3,
+    "motClef": "Diplômé"
+  },
+  {
+    "idMembre": 446,
+    "idCompetence": 7,
+    "motClef": "Diplômé"
+  },
+  {
+    "idMembre": 50,
+    "idCompetence": 4,
+    "motClef": "Expérimenté"
+  },
+  {
+    "idMembre": 64,
+    "idCompetence": 5,
+    "motClef": "Expérimenté"
+  },
+  {
+    "idMembre": 80,
+    "idCompetence": 4,
+    "motClef": "Expérimenté"
+  },
+  {
+    "idMembre": 102,
+    "idCompetence": 5,
+    "motClef": "Expérimenté"
+  },
+  {
+    "idMembre": 112,
+    "idCompetence": 9,
+    "motClef": "Expérimenté"
+  },
+  {
+    "idMembre": 115,
+    "idCompetence": 6,
+    "motClef": "Expérimenté"
+  },
+  {
+    "idMembre": 288,
+    "idCompetence": 9,
+    "motClef": "Expérimenté"
+  },
+  {
+    "idMembre": 303,
+    "idCompetence": 1,
+    "motClef": "Expérimenté"
+  },
+  {
+    "idMembre": 309,
+    "idCompetence": 1,
+    "motClef": "Expérimenté"
+  },
+  {
+    "idMembre": 310,
+    "idCompetence": 6,
+    "motClef": "Expérimenté"
+  },
+  {
+    "idMembre": 360,
+    "idCompetence": 8,
+    "motClef": "Expérimenté"
+  },
+  {
+    "idMembre": 380,
+    "idCompetence": 10,
+    "motClef": "Expérimenté"
+  },
+  {
+    "idMembre": 414,
+    "idCompetence": 3,
+    "motClef": "Expérimenté"
+  },
+  {
+    "idMembre": 48,
+    "idCompetence": 10,
+    "motClef": "Outils Pro"
+  },
+  {
+    "idMembre": 120,
+    "idCompetence": 4,
+    "motClef": "Outils Pro"
+  },
+  {
+    "idMembre": 136,
+    "idCompetence": 10,
+    "motClef": "Outils Pro"
+  },
+  {
+    "idMembre": 175,
+    "idCompetence": 3,
+    "motClef": "Outils Pro"
+  },
+  {
+    "idMembre": 328,
+    "idCompetence": 9,
+    "motClef": "Outils Pro"
+  },
+  {
+    "idMembre": 358,
+    "idCompetence": 2,
+    "motClef": "Outils Pro"
+  },
+  {
+    "idMembre": 4,
+    "idCompetence": 9,
+    "motClef": "Urgence"
+  },
+  {
+    "idMembre": 13,
+    "idCompetence": 6,
+    "motClef": "Urgence"
+  },
+  {
+    "idMembre": 72,
+    "idCompetence": 2,
+    "motClef": "Urgence"
+  },
+  {
+    "idMembre": 126,
+    "idCompetence": 1,
+    "motClef": "Urgence"
+  },
+  {
+    "idMembre": 143,
+    "idCompetence": 2,
+    "motClef": "Urgence"
+  },
+  {
+    "idMembre": 236,
+    "idCompetence": 3,
+    "motClef": "Urgence"
+  },
+  {
+    "idMembre": 391,
+    "idCompetence": 8,
+    "motClef": "Urgence"
+  },
+  {
+    "idMembre": 53,
+    "idCompetence": 1,
+    "motClef": "Véhiculé"
+  },
+  {
+    "idMembre": 111,
+    "idCompetence": 6,
+    "motClef": "Véhiculé"
+  },
+  {
+    "idMembre": 113,
+    "idCompetence": 7,
+    "motClef": "Véhiculé"
+  },
+  {
+    "idMembre": 141,
+    "idCompetence": 8,
+    "motClef": "Véhiculé"
+  },
+  {
+    "idMembre": 195,
+    "idCompetence": 2,
+    "motClef": "Véhiculé"
+  },
+  {
+    "idMembre": 215,
+    "idCompetence": 11,
+    "motClef": "Véhiculé"
+  },
+  {
+    "idMembre": 230,
+    "idCompetence": 1,
+    "motClef": "Véhiculé"
+  },
+  {
+    "idMembre": 259,
+    "idCompetence": 10,
+    "motClef": "Véhiculé"
+  },
+  {
+    "idMembre": 275,
+    "idCompetence": 2,
+    "motClef": "Véhiculé"
+  },
+  {
+    "idMembre": 280,
+    "idCompetence": 9,
+    "motClef": "Véhiculé"
+  },
+  {
+    "idMembre": 333,
+    "idCompetence": 7,
+    "motClef": "Véhiculé"
+  },
+  {
+    "idMembre": 389,
+    "idCompetence": 6,
+    "motClef": "Véhiculé"
+  },
+  {
+    "idMembre": 415,
+    "idCompetence": 10,
+    "motClef": "Véhiculé"
+  },
+  {
+    "idMembre": 491,
+    "idCompetence": 2,
+    "motClef": "Véhiculé"
+  }
+]
