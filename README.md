@@ -3,6 +3,7 @@
 ### 1. Prérequis
 - Docker & Docker Compose installés
 - Système Unix/Linux ou Windows avec WSL
+- (Optionnel) Python 3.10 ou plus si utilisaton du script `UseAPI.py`
 
 ### 2. Structure du projet
 projet_duckdb/
@@ -27,15 +28,25 @@ projet_duckdb/
     ```./run_demo.sh```
 
 Le script effectue : 
-- Suppression éventuelle du conteneur DuckDB existant
+- Suppression du conteneur DuckDB existant (si il existe)
 - Création et lancement du conteneur DuckDB
 - Exécution automatique du script SQL `integration.sql`
-- Création de la base de données `/data/mydatabase.duckdb` avec toutes les tables et vues
-- Import des données CSV, JSON, Parquet et Images BLOB
+- Création de la base de données `/data/mydatabase.duckdb`
+- Import des données CSV, JSON, Parquet et Images (BLOB)
 - Calculs te affichage des requêtes de test
 Le conteneur se termine automatiquement après l'exécution
 
-### 4. Contenu du script `integration.sql`
+### 4. Utilisation du script `UseAPI.py`
+Le script permet d'interroger une API externe (Open-Meteo), de transformer les données et de les intégrer dans DuckDB : 
+Fonctionnement : 
+- Appel d'une API REST
+- Transformation des données en DataFrame
+- Insertion ou analyse via DuckDB
+Exécution (hors Docker) : 
+```python UseAPI.py```
+Ce script nécessité l'installation des dépendances python (duckdb; pandas; requests)
+
+### 5. Contenu du script `integration.sql`
 Le script doit contenur : 
 1. Initialisation
     - Suppression des tables existantes pour une relance propre
@@ -53,21 +64,21 @@ Le script doit contenur :
     - Transactions avce images associées
     - Toutes autre requête d'analyse ou vue nécessaire
 
-### 5. Résultats attendus
+### 6. Résultats attendus
 Après l'exécution, vosu verrez : 
-- Tableau des 10 membres ayant le plus dépensé
-- Tableau des transactions avce leurs images associées
-- Résultats des autres incluses dans `integration.sql`
+- Top 10 des bénéficiaires par dépense moyenne
+- Top compétences les plus représentées
+- Répartition des commentaires par note
+- Fréquence des qualifications par mot-clé
+- Liste des images de transactions avce métadonnées extraites
 
-### 6. Nettoyage
+### 7. Nettoyage
 Pour supprimer la base de données et relancer proprement : 
     ```rm -f data/mydatabase.duckdb```
-
-Puis relancer : 
     ```./run_duckdb.sh```
 
-### 7. Notes
-- L'image DuckDB officielle est éphémère, il n'est pas possible d'ouvri un terminal interactif après exécution
+### 8. Notes
+- L'image DuckDB officielle est éphémère, il n'est pas possible d'ouvrir un terminal interactif après exécution
 - Pour tester d'autres requêtes, il suffit de les ajouter dans `integration.sql` et de relancer le script
 - DuckDB gère nativement CSV, JSON, Parquet et BLOBs, ce qui facilite l'intégration hétérogène
 
