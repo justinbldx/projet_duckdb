@@ -35,7 +35,7 @@ Le script effectue :
 - Exécution automatique du script SQL `integration.sql`
 - Création de la base de données `/data/mydatabase.duckdb`
 - Import des données CSV, JSON, Parquet et Images (BLOB)
-- Calculs te affichage des requêtes de test
+- Calculs te affichage des requêtes de test  
 Le conteneur se termine automatiquement après l'exécution
 
 ### 4. Utilisation du script `UseAPI.py`
@@ -45,7 +45,9 @@ Fonctionnement :
 - Transformation des données en DataFrame
 - Insertion ou analyse via DuckDB
 Exécution (hors Docker) : 
-```python UseAPI.py```
+```
+python UseAPI.py
+```
 Ce script nécessité l'installation des dépendances python (duckdb; pandas; requests)
 
 ### 5. Contenu du script `integration.sql`
@@ -60,7 +62,7 @@ Le script doit contenur :
     - JSON : `MotClef`, `Qualification`
     - Images BLOB : `ImageTransaction`
 4. Contrôles d'intégrité
-    - Vérifocation de la validité des références avant reconstruction des clés étrangères
+    - Vérification de la validité des références avant reconstruction des clés étrangères
 5. Requêtes de test
     - Membres ayant le plus dépensé
     - Transactions avce images associées
