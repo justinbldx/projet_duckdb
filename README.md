@@ -6,6 +6,7 @@
 - (Optionnel) Python 3.10 ou plus si utilisaton du script `UseAPI.py`
 
 ### 2. Structure du projet
+```
 projet_duckdb/
 ├─ data/                      # Tous les fichiers CSV, JSON, Parquet et images
 ├─ duckdb/                    # Contient le script SQL
@@ -13,6 +14,7 @@ projet_duckdb/
 ├─ docker-compose.yml         # Déploiement Docker de DuckDB
 ├─ run_demo.sh                # Script pour lancer la démo
 └─ README.md                  # Manuel d’installation et déploiement
+```
 
 ### 3. Déploiement
 
@@ -37,7 +39,7 @@ Le script effectue :
 Le conteneur se termine automatiquement après l'exécution
 
 ### 4. Utilisation du script `UseAPI.py`
-Le script permet d'interroger une API externe (Open-Meteo), de transformer les données et de les intégrer dans DuckDB : 
+Le script permet d'interroger une API externe (Open-Meteo), de transformer les données et de les intégrer dans DuckDB :  
 Fonctionnement : 
 - Appel d'une API REST
 - Transformation des données en DataFrame
@@ -74,8 +76,10 @@ Après l'exécution, vosu verrez :
 
 ### 7. Nettoyage
 Pour supprimer la base de données et relancer proprement : 
-    ```rm -f data/mydatabase.duckdb```
-    ```./run_duckdb.sh```
+    ```
+    rm -f data/mydatabase.duckdb
+    ./run_duckdb.sh
+    ```
 
 ### 8. Notes
 - L'image DuckDB officielle est éphémère, il n'est pas possible d'ouvrir un terminal interactif après exécution
