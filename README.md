@@ -75,6 +75,7 @@ Après l'exécution, vosu verrez :
 - Répartition des commentaires par note
 - Fréquence des qualifications par mot-clé
 - Liste des images de transactions avce métadonnées extraites
+- Resultat de requêtes sur des API et affichage des tables retournées
 
 ### 7. Nettoyage
 Pour supprimer la base de données et relancer proprement : 

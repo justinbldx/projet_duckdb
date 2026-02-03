@@ -4,3 +4,4 @@ mysql/
 
 venv/
 
+data/mydatabase*

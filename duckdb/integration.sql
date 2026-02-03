@@ -289,3 +289,33 @@ SELECT
     file AS image_path
 FROM glob('/data/photos_transactions_massif/*')
 WHERE split_part(file, '/', -1) LIKE 'transaction_%_%';
+
+-- ===========================================================
+-- REQUÊTES DE TEST : READ_JSON
+-- ===========================================================
+SELECT
+    name.common AS pays,
+    capital,
+    population,
+    region
+FROM read_json('https://restcountries.com/v3.1/all?fields=name,capital,population,region');
+
+SELECT
+    name.common AS pays,
+    capital[1] AS capitale,
+    population,
+    region
+FROM read_json(
+    'https://restcountries.com/v3.1/all?fields=name,capital,population,region'
+)
+ORDER BY population DESC
+LIMIT 10;
+
+SELECT
+  hourly.time[i] AS heure,
+  hourly.temperature_2m[i] AS temperature
+FROM read_json(
+  'https://api.open-meteo.com/v1/forecast?latitude=48.8566&longitude=2.3522&hourly=temperature_2m'
+),
+UNNEST(range(1, array_length(hourly.time) + 1)) AS u(i);
+
